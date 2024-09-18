@@ -1,0 +1,331 @@
+@import "../../scss/index.scss";
+
+@import "../../scss/footer/footer.scss";
+
+@import "../../scss/header/header.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    .fitness {
+        background-image: url(../images/image\ 14.png);
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .fitness-main {
+            text-align: center;
+
+            h1 {
+                @include font60;
+                color: var(--colorwhite);
+                letter-spacing: 3px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                @include font20;
+                color: var(--colorwhite);
+                font-weight: 400;
+                max-width: 1000px;
+            }
+        }
+    }
+
+    .menubar {
+        .container5 {
+            .menubar-div {
+                padding: 30px 0 24px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .menubar-div1 {
+                    display: flex;
+                    gap: 32px;
+
+                    .menubar-div1-ancer {
+                        @include font16;
+                        font-weight: 700;
+                        color: var(--color1);
+                    }
+
+                    a {
+                        text-decoration-line: none;
+                        @include font16;
+                        font-weight: 400;
+                        color: var(--color2);
+                    }
+                }
+
+                .menubar-div2 {
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        @include font16;
+                        font-weight: 400;
+                        color: var(--color2);
+                        margin-right: 10px;
+                    }
+
+                    .menubar-div2-newest {
+                        width: 128px;
+                        height: 33px;
+                        border: 1px solid var(--bordercolor1);
+                        padding: 0 7px 0 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        h6 {
+                            @include font16;
+                            color: var(--color1);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .intensity {
+        background-color: var(--bgcolor1);
+        padding: 20px 0;
+
+        .container5 {
+            .intensity-div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .intensity-div1 {
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        @include font18;
+                        color: var(--color2);
+                        margin-right: 16px;
+                    }
+
+                    .intensity-div1-select {
+                        display: flex;
+                        align-items: center;
+                        gap: 24px;
+
+                        .intensity-div1-select1 {
+                            display: flex;
+                            gap: 8px;
+                            align-items: center;
+
+                            input {
+                                margin: 0;
+                                width: 20px;
+                                height: 20px;
+                                accent-color: var(--color1);
+                            }
+
+                            h5 {
+                                @include font18;
+                                font-weight: 400;
+                                color: var(--color1);
+                            }
+                        }
+                    }
+                }
+
+                .intensity-div2 {
+                    width: 266px;
+                    height: 30px;
+                    background: #FFF;
+                    box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.25);
+                    padding: 3px;
+                    display: flex;
+                    justify-content: space-between;
+                    .intensity-div2-main1 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: var(--colorblack);
+                        width: 100%;
+                        color: var(--colorwhite);
+                        @include font14;
+                        font-weight: 600;
+                    }
+                    .intensity-div2-main2 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        color: var(--color1);
+                        @include font14;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .me-series {
+        display: flex;
+        justify-content: center;
+        .me-series-main {
+            padding: 30px 0 100px 0;
+            .me-series-main-div {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 30px 22px;
+                align-items: center;
+                .me-series-main-div1 {
+                    a {
+                        text-decoration-line: none;
+                        .me-series-main-div1-sub {
+                            img {
+                                display: block;
+                            }
+                            h1 {
+                                @include font20;
+                                font-weight: 600;
+                                color: var(--color1);
+                                padding: 18px 0 8px 0;
+                            }
+                            span {
+                                display: block;
+                                @include font16;
+                                font-weight: 400;
+                                color: var(--color2);
+                                margin-bottom: 14px;
+                            }
+                            .me-series-main-div1-border {
+                                width: 100%;
+                                border-top: 1px solid var(--bordercolor1);
+                            }
+                            p{
+                                @include font16;
+                                font-weight: 300;
+                                color: var(--color2);
+                                max-width: 370px;
+                                padding-top: 14px;
+                                small {
+                                    @include font16;
+                                    font-weight: 500;
+                                    color: var(--color1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+    
+section {
+    .fitness {
+        .fitness-main {
+            padding: 0 20px;
+
+            h1 {
+                @include font36;
+            }
+
+            p {
+                @include font18;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .menubar {
+        .container5 {
+            .menubar-div {
+                padding: 30px 20px 24px 20px;
+                .menubar-div1 {
+                    display: none;
+                }
+                .menubar-div2 {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .intensity {
+        display: none;
+
+    }
+    .me-series {
+        .me-series-main {
+            padding: 0 0 50px 0;
+            .me-series-main-div {
+                grid-template-columns: repeat(2,1fr);
+                gap: 30px 16px;
+                padding: 0 20px;
+                align-items: flex-start;
+                .me-series-main-div1 {
+                    a {
+                        .me-series-main-div1-sub {
+                            img {
+                                width: 165px;
+                                height: 150px;
+                                
+                            }
+                            h1 {
+                                @include font14;
+                                font-weight: 600;
+                                color: var(--color1);
+                                padding: 18px 0 8px 0;
+                            }
+                            span {
+                                display: block;
+                                @include font16;
+                                font-weight: 400;
+                                color: var(--color2);
+                                margin-bottom: 14px;
+                            }
+                            .me-series-main-div1-border {
+                                width: 100%;
+                                border-top: 1px solid var(--bordercolor1);
+                            }
+                            p{
+                                @include font16;
+                                font-weight: 300;
+                                color: var(--color2);
+                                max-width: 370px;
+                                padding-top: 14px;
+                                small {
+                                    @include font16;
+                                    font-weight: 500;
+                                    color: var(--color1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}

@@ -1,0 +1,176 @@
+@import "../../scss/index.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.main-box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .sub-box {
+        display: grid;
+        grid-template-columns: 406px 1fr;
+        gap: 65px;
+        align-items: center;
+        .sub-box1 {
+            .sub-box1-relative {
+                height: 559px;
+                position: relative;
+                .sub-box1-relative-img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    box-shadow: -6px 8px 54px 0px rgba(0, 0, 0, 0.25);
+                    img {
+                        width: 242px;
+                        height: 527px;
+                    }
+                }
+                .sub-box1-relative-img2 {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    box-shadow: -6px 8px 54px 0px rgba(0, 0, 0, 0.25);
+                    img {
+                        width: 216px;
+                        height: 469px;
+                    }
+                }
+            }
+        }
+        .sub-box2 {
+            display: flex;
+            align-items: center;
+            .sub-box2-main {
+                width: 396px;
+                .sub-box2-main-logo {
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 40px;
+                    img {
+                        width: 69px;
+                    }
+                }
+                .sub-box2-main-input {
+                    .sub-box2-main-input1 {
+                        position: relative;
+                        input {
+                            width: 374px;
+                            height: 48px;
+                            display: block;
+                            padding: 0 10px;
+                            margin-bottom: 15px;
+                            border: 1px solid var(--bordercolor1);
+                        }
+                        img {
+                            position: absolute;
+                            top: 13px;
+                            right: 15px;
+                        }
+                    }
+                    .sub-box2-main-input2 {
+                        position: relative;
+                        input {
+                            width: 374px;
+                            height: 48px;
+                            display: block;
+                            padding: 0 10px;
+                            margin-bottom: 10px;
+                            border: 1px solid var(--bordercolor1);
+                        }
+                        img {
+                            position: absolute;
+                            top: 13px;
+                            right: 15px;
+                        }
+                    }
+                }
+                .sub-box2-main-ancer {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-bottom: 50px;
+                    a {
+                        text-decoration-line: none;
+                        color: var(--color1);
+                        @include font14;
+                    }
+                }
+                .sub-box2-main-ancer2 {
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 30px;
+                    p {
+                        color: var(--color2);
+                        @include font14;
+                        a {
+                            color: var(--color1);
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .main-box {
+        display: block;
+        .sub-box {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 20px;
+            gap: 30px;
+            .sub-box1 {
+                .sub-box1-relative {
+                    .sub-box1-relative-img {
+                        img {
+                            width: 200px;
+                        }
+                    }
+                    .sub-box1-relative-img2 {
+                        img {
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+            .sub-box2 {
+                .sub-box2-main {
+                    width: 100%;
+                    .sub-box2-main-logo {
+                        img {
+                            width: 60px;
+                        }
+                    }
+                    .sub-box2-main-input {
+                        .sub-box2-main-input1 {
+                            input {
+                                width: 329px;
+                            }
+                        }
+                        .sub-box2-main-input2 {
+                            input {
+                                width: 329px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

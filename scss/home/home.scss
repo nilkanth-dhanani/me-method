@@ -1,0 +1,102 @@
+@import "../index.scss";
+
+@import "../header/header.scss";
+
+@import "../footer/footer.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    background-image: url("../../images/image\ 33.png");
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .banner-div {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .banner-div-main {
+            .banner-div-main1 {
+                display: flex;
+                justify-content: center;
+
+                .banner-div-main1-flex {
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                }
+            }
+
+            .banner-div-main2 {
+                padding: 20px 0;
+                text-align: center;
+
+                h1 {
+                    @include font28;
+                    color: var(--color1);
+                }
+            }
+
+            .banner-div-main3 {
+                padding-top: 20px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .banner {
+        .banner-div {
+            .banner-div-main {
+                padding: 20px;
+                .banner-div-main1 {
+                    .banner-div-main1-flex {
+                        display: block;
+                        div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0 0 30px 0;
+                            img {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .banner-div-main3 {
+                    display: block;
+                    
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,141 @@
+@import "../../scss/index.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    padding: 60px 0 20px 0;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--bordercolor1);
+    .head-div {
+        text-align: center;
+        h1 {
+            @include font30;
+            color: var(--color1);
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+        p {
+            @include font22;
+            color: var(--color2);
+            font-weight: 500;
+        }
+    }
+}
+.main-div {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 50px 0;
+    .sub-div {
+        width: 396px;
+        .card-div {
+            margin-bottom: 16px;
+            h5 {
+                @include font14;
+                color: var(--color2);
+                padding-bottom: 6px;
+            }
+            input {
+                display: flex;
+                align-items: center;
+                width: 376px;
+                height: 46px;
+                padding: 0 0 0 16px;
+                @include font14;
+                color: var(--color2);
+                border: 1px solid var(--bordercolor1);
+            }
+        }
+        .card-div-flex {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            .card-div1 {
+                margin-bottom: 30px;
+                h5 {
+                    @include font14;
+                    color: var(--color2);
+                    padding-bottom: 6px;
+                }
+                input {
+                    display: flex;
+                    align-items: center;
+                    width: 170px;
+                    height: 46px;
+                    padding: 0 0 0 16px;
+                    @include font14;
+                    color: var(--color2);
+                    border: 1px solid var(--bordercolor1);
+                }
+            }
+        }
+        .package-end {
+            padding: 13px 14px;
+            background-color: var(--bordercolor2);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 24px;
+            h2 {
+                @include font16;
+                color: var(--color1);
+            }
+            p {
+                @include font16;
+                color: var(--color2);
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .head {
+        padding: 60px 20px 20px 20px;
+        .head-div {
+            text-align: center;
+        }
+    }
+    .main-div {
+        padding: 0 20px;
+        .sub-div {
+            width: 100%;
+            .card-div {
+                input {
+                    width: 330px;
+                }
+            }
+            .card-div-flex {
+                .card-div1 {
+                    input {
+                        width: 147px;
+                    }
+                }
+            }
+            .next-button {
+                a {
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+

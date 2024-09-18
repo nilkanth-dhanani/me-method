@@ -1,0 +1,85 @@
+
+
+@mixin font10 {
+    font-size: 10px;
+    font-weight: 400;
+    font-family: var(--font-familylato);
+}
+
+@mixin font12 {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: var(--font-familylato);
+}
+
+@mixin font14 {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-familylato);
+}
+
+@mixin font16 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font-familylato);
+}
+
+@mixin font18 {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--font-familylato);
+}
+
+@mixin font20 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-familylato);
+}
+
+@mixin font22 {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: var(--font-familylato);
+}
+
+@mixin font24 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--font-familylato);
+}
+
+@mixin font26 {
+    font-size: 26px;
+    font-weight: 700;
+    font-family: var(--font-familylato);
+}
+
+@mixin font28 {
+    font-size: 28px;
+    font-weight: 400;
+    font-family: var(--font-familylato);
+}
+
+@mixin font30 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: var(--font-familylato);
+}
+
+@mixin font32 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: var(--font-familylato);
+}
+
+@mixin font36 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--font-familylato);
+}
+
+@mixin font60 {
+    font-size: 60px;
+    font-weight: 700;
+    font-family: var(--font-familylato);
+}

@@ -1,0 +1,146 @@
+@import "../../scss/index.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    padding: 60px 0 20px 0;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--bordercolor1);
+    .head-div {
+        h1 {
+            @include font30;
+            color: var(--color1);
+        }
+    }
+}
+.main-div {
+    display: flex;
+    justify-content: center;
+    .sub-div {
+        width: 396px;
+        .input-button {
+            .input-button1 {
+                input {
+                    padding: 17px 17px 16px 17px;
+                    margin-bottom: 16px;
+                    border: 1px solid var(--bordercolor1);
+                    @include font14;
+                    width: 359px;
+                }
+                ::placeholder {
+                    color: var(--color2);
+                }
+            }
+        }
+        .select-gender {
+            .select-gender-head {
+                padding: 8px 0 16px 0;
+                h2 {
+                    @include font16;
+                    color: var(--color1);
+                    font-weight: 700;
+                }
+            }
+            .select-gender-option {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 16px 10px 20px;
+                margin-bottom: 16px;
+                background-color: var(--bordercolor1);
+                border: 1px solid var(--colorwhite);
+                &:hover {
+                    border: 1px solid var(--color1);
+                    background-color: var(--colorwhite);
+                }
+                .select-gender-option-div1 {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    input {
+                        margin: 0;
+                        width: 18px;
+                        height: 18px;
+                        accent-color: var(--color1);
+                    }
+                    h5 {
+                        @include font18;
+                        color: var(--color1);
+                    }
+                }
+            }
+            .select-gender-option2 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 16px 10px 20px;
+                margin-bottom: 30px;
+                background-color: var(--bordercolor1);
+                border: 1px solid var(--colorwhite);
+                &:hover {
+                    border: 1px solid var(--color1);
+                    background-color: var(--colorwhite);
+                }
+                .select-gender-option2-div1 {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    input {
+                        width: 18px;
+                        height: 18px;
+                        accent-color: var(--color1);
+                    }
+                    h5 {
+                        @include font18;
+                        color: var(--color1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .head {
+        padding: 60px 20px 20px 20px;
+        .head-div {
+            text-align: center;
+        }
+    }
+    .main-div {
+        padding: 0 20px;
+        .sub-div {
+            width: 100%;
+            .input-button {
+                .input-button1 {
+                    input {
+                        width: 314px;
+                    }
+                }
+            }
+            .next-button {
+                a {
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

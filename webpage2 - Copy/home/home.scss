@@ -1,0 +1,223 @@
+@import "../../scss/index.scss";
+
+@import "../../scss/footer/footer.scss";
+
+@import "../../scss/header/header.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.main-div {
+    .container5 {
+        .first-img {
+            video {
+                width: 1200px;
+            }
+        }
+        .Giorgio {
+            padding: 24px 0 30px 0;
+            .Giorgio-flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .Giorgio-flex1 {
+                    h1 {
+                        @include font26;
+                        color: var(--color1);
+                        padding: 0 0 16px 0;
+                    }
+                    p {
+                        @include font20;
+                        font-weight: 400;
+                        color: var(--color2);
+                    }
+                }
+                .Giorgio-flex2 {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .Giorgio-flex2-div2 {
+                        @include font18;
+                        font-weight: 500;
+                        color: var(--color2);
+                    }
+                }
+            }
+        }
+        .vinyasa {
+            padding: 70px 0;
+            border-bottom: 1px solid var(--bordercolor1);
+            border-top: 1px solid var(--bordercolor1);
+            p {
+                @include font18;
+                font-weight: 300;
+                color: var(--color2);
+            }
+        }
+        .recommended {
+            padding-top: 70px;
+            h1 {
+                text-align: center;
+                @include font36;
+                color: var(--color1);
+            }
+        }
+        .me-series {
+            display: flex;
+            justify-content: center;
+            .me-series-main {
+                padding: 30px 0 100px 0;
+                .me-series-main-div {
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    gap: 30px 22px;
+                    align-items: center;
+                    .me-series-main-div1 {
+                        a {
+                            text-decoration-line: none;
+                            .me-series-main-div1-sub {
+                                img {
+                                    display: block;
+                                }
+                                h1 {
+                                    @include font20;
+                                    font-weight: 600;
+                                    color: var(--color1);
+                                    padding: 18px 0 8px 0;
+                                }
+                                span {
+                                    display: block;
+                                    @include font16;
+                                    font-weight: 400;
+                                    color: var(--color2);
+                                    margin-bottom: 14px;
+                                }
+                                .me-series-main-div1-border {
+                                    width: 100%;
+                                    border-top: 1px solid var(--bordercolor1);
+                                }
+                                p{
+                                    @include font16;
+                                    font-weight: 300;
+                                    color: var(--color2);
+                                    max-width: 370px;
+                                    padding-top: 14px;
+                                    small {
+                                        @include font16;
+                                        font-weight: 500;
+                                        color: var(--color1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .main-div {
+        .container5 {
+            padding: 0 20px;
+            .first-img {
+                video {
+                    width: 100%;
+                }
+            }
+            .Giorgio {
+                padding: 17px 0 11px 0;
+                .Giorgio-flex {
+                    .Giorgio-flex1 {
+                        h1 {
+                            @include font16;
+                            font-weight: 700;
+                            padding: 0 0 5px 0;
+                        }
+                        p {
+                            @include font14;
+                            font-weight: 400;
+                        }
+                    }
+                    .Giorgio-flex2 {
+                        display: none;
+                    }
+                }
+            }
+            .vinyasa {
+                padding: 10px 0 20px 0;
+                p {
+                    @include font12;
+                    font-weight: 400;
+                }
+            }
+            .recommended {
+                padding-top: 20px;
+                h1 {
+                    @include font18;
+                    font-weight: 700;
+                }
+            }
+            .me-series {
+                .me-series-main {
+                    padding: 16px 0 30px 0;
+                    .me-series-main-div {
+                        grid-template-columns: repeat(2,1fr);
+                        gap: 30px 16px;
+                        padding: 0 20px;
+                        align-items: flex-start;
+                        .me-series-main-div1 {
+                            a {
+                                .me-series-main-div1-sub {
+                                    img {
+                                        width: 165px;
+                                        height: 150px;
+                                        
+                                    }
+                                    h1 {
+                                        @include font14;
+                                        font-weight: 600;
+                                        padding: 18px 0 8px 0;
+                                    }
+                                    span {
+                                        display: block;
+                                        @include font16;
+                                        font-weight: 400;
+                                        margin-bottom: 14px;
+                                    }
+                                    .me-series-main-div1-border {
+                                        width: 100%;
+                                    }
+                                    p{
+                                        @include font16;
+                                        font-weight: 300;
+                                        max-width: 370px;
+                                        padding-top: 14px;
+                                        small {
+                                            @include font16;
+                                            font-weight: 500;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

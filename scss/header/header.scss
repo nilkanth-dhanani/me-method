@@ -1,0 +1,81 @@
+@import "../../scss/typography/typography.scss";
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: var(--colorwhite);
+    .display-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 27px 0 30px 0;
+        .display-flex-navigation {
+            nav {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+                a {
+                    @include font18;
+                    font-weight: 400;
+                    color: var(--color1);
+                    text-decoration-line: none;
+                }
+            }
+        }
+        .display-flex-menubar {
+            display: none;
+            max-width: 30px;
+            position: relative;
+            &:hover {
+                .display-flex-menubar-drop {
+                    max-height: 100vh;
+                    overflow: hidden;
+                    transition: 1.9s ease-in-out;
+                }
+            }
+            img {
+                height: 30px;
+                width: 30px;
+            }
+            .display-flex-menubar-drop {
+                position: absolute;
+                background-color: var(--colorwhite);
+                top: 30px;
+                right: 30px;
+                width: 100px;
+                transition: 1.9s ease-in-out;
+                max-height: 0px;
+                overflow: hidden;
+                .display-flex-navigation {
+                    nav {
+                        display: block;
+                        a {
+                            padding-top: 10px;
+                            display: block;
+                            @include font16;
+                            font-weight: 400;
+                            color: var(--color1);
+                            text-decoration-line: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    header {
+        .display-flex {
+            padding: 27px 20px 30px 20px;
+            .display-flex-navigation {
+                display: none;
+            }
+            .display-flex-menubar {
+                display: block;
+            }
+        }
+    }
+}

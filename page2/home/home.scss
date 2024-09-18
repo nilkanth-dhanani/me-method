@@ -1,0 +1,225 @@
+@import "../../scss/index.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.main-box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .sub-box {
+        display: grid;
+        grid-template-columns: 406px 1fr;
+        gap: 65px;
+        align-items: center;
+        .sub-box1 {
+            .sub-box1-relative {
+                height: 559px;
+                position: relative;
+                .sub-box1-relative-img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    box-shadow: -6px 8px 54px 0px rgba(0, 0, 0, 0.25);
+                    img {
+                        width: 242px;
+                        height: 527px;
+                    }
+                }
+                .sub-box1-relative-img2 {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    box-shadow: -6px 8px 54px 0px rgba(0, 0, 0, 0.25);
+                    img {
+                        width: 216px;
+                        height: 469px;
+                    }
+                }
+            }
+        }
+        .sub-box2 {
+            display: flex;
+            align-items: center;
+            .sub-box2-main {
+                width: 396px;
+                .sub-box2-main-head {
+                    text-align: center;
+                    h1 {
+                        @include font20;
+                        color: var(--color1);
+                        margin-bottom: 16px;
+                    }
+                }
+                .sub-box2-main-pera {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    p {
+                        @include font16;
+                        color: var(--color2);
+                        margin-bottom: 40px;
+                        max-width: 317px;
+                    }
+                }
+                .sub-box2-main-input {
+                    .sub-box2-main-input1 {
+                        position: relative;
+                        input {
+                            width: 374px;
+                            height: 48px;
+                            display: block;
+                            padding: 0 10px;
+                            margin-bottom: 16px;
+                            border: 1px solid var(--bordercolor1);
+                        }
+                        img {
+                            position: absolute;
+                            top: 13px;
+                            right: 15px;
+                        }
+                    }
+                    .sub-box2-main-input2 {
+                        position: relative;
+                        input {
+                            width: 319px;
+                            height: 48px;
+                            display: block;
+                            padding: 0 10px 0 65px;
+                            margin-bottom: 16px;
+                            border: 1px solid var(--bordercolor1);
+                        }
+                        img {
+                            position: absolute;
+                            top: 13px;
+                            right: 15px;
+                        }
+                        select {
+                            height: 48px;
+                            border: none;
+                            border-right: 1px solid var(--bordercolor1);
+                            position: absolute;
+                            top: 1px;
+                            left: 1px;
+                        }
+                    }
+                    .sub-box2-main-input3 {
+                        position: relative;
+                        input {
+                            width: 374px;
+                            height: 48px;
+                            display: block;
+                            padding: 0 10px;
+                            margin-bottom: 16px;
+                            border: 1px solid var(--bordercolor1);
+                        }
+                        img {
+                            position: absolute;
+                            top: 13px;
+                            right: 15px;
+                        }
+                    }
+                }
+                .sub-box2-main-checkbox {
+                    display: flex;
+                    gap: 11px;
+                    align-items: start;
+                    padding-bottom: 21px;
+                    input {
+                        width: 31px;
+                        height: 24px;
+                        margin: 0;
+                    }
+                    p {
+                        @include font14;
+                        color: var(--color2);
+                        max-width: 359px;
+                        a {
+                            @include font14;
+                            color: var(--color1);
+                            font-weight: 600;
+                        }
+                    }
+                }
+                .sub-box2-main-button {
+                    padding-top: 39px;
+                }
+                .sub-box2-main-ancer2 {
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 20px;
+                    p {
+                        color: var(--color2);
+                        @include font14;
+                        a {
+                            color: var(--color1);
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .main-box {
+        display: block;
+        .sub-box {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 20px;
+            gap: 30px;
+            .sub-box1 {
+                .sub-box1-relative {
+                    .sub-box1-relative-img {
+                        img {
+                            width: 200px;
+                        }
+                    }
+                    .sub-box1-relative-img2 {
+                        img {
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+            .sub-box2 {
+                .sub-box2-main {
+                    width: 100%;
+                    .sub-box2-main-input {
+                        .sub-box2-main-input1 {
+                            input {
+                                width: 329px;
+                            }
+                        }
+                        .sub-box2-main-input2 {
+                            input {
+                                width: 273px;
+                            }
+                        }
+                        .sub-box2-main-input3 {
+                            input {
+                                width: 329px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

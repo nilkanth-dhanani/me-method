@@ -1,0 +1,92 @@
+@import "../../scss/index.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    padding: 60px 0 20px 0;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--bordercolor1);
+    .head-div {
+        h1 {
+            @include font30;
+            color: var(--color1);
+        }
+    }
+}
+.main-div {
+    display: flex;
+    justify-content: center;
+    .sub-div {
+        .options-flex {
+            display: flex;
+            gap: 112px;
+            .options-flex-div {
+                padding-bottom: 30px;
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                gap: 16px;
+                .options-flex-div1 {
+                    padding: 8px 13px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    border: 1px solid var(--colorwhite);
+                    background-color: var(--bordercolor1);
+                    width: fit-content;
+                    &:hover {
+                        border: 1px solid var(--color1);
+                        background-color: var(--colorwhite);
+                    }
+                    h5 {
+                        @include font16;
+                        color: var(--color1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .head {
+        padding: 60px 20px 20px 20px;
+        margin-bottom: 20px;
+        .head-div {
+            text-align: center;
+        }
+    }
+    .main-div {
+        padding: 20px;
+        .sub-div {
+                .options-flex {
+                    display: block;
+                    .options-flex-div {
+                        padding-bottom: 16px;
+                    }
+                }
+            .next-button {
+                a {
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
