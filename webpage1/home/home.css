@@ -524,7 +524,6 @@ section .product-div .product-grid-main .product-grid {
 }
 section .product-div .product-grid-main .product-grid .product-grid1 .product-grid1-box {
   height: 281px;
-  width: 255px;
   background-color: var(--colorwhite);
   display: flex;
   align-items: center;
